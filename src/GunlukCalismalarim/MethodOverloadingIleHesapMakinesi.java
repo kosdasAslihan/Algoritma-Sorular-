@@ -43,7 +43,8 @@ public class MethodOverloadingIleHesapMakinesi {
             if (islem.equals("q")) {
                 System.out.println("Programdan Çıkılıyor...");
                 break;
-            } else if (islem.equals("1")) {
+            }
+            else if (islem.equals("1")) {
                 System.out.print("Kaç değer toplayacaksınız ?  (2 veya 3) : ");
 
                 int kacsayi = scanner.nextInt();
@@ -55,7 +56,8 @@ public class MethodOverloadingIleHesapMakinesi {
                     int b = scanner.nextInt();
                     scanner.nextLine(); // \n'yi karakter olarak almaması için nextline yazdık
                     System.out.print("Girilen sayıların toplamları : " + (toplama(a, b)));
-                } else if (kacsayi == 3) {
+                }
+                else if (kacsayi == 3) {
                     System.out.print("a:");
                     int a = scanner.nextInt();
                     System.out.print("b:");
@@ -65,10 +67,12 @@ public class MethodOverloadingIleHesapMakinesi {
                     scanner.nextLine();
                     System.out.print("Girilen sayıların toplamı: " + (toplama(a, b, c)));
 
-                } else {
+                }
+                else {
                     System.out.println("Bunun için uygun metod bulunmuyor...");
                 }
-            } else if (islem.equals("2")) {
+            }
+            else if (islem.equals("2")) {
                 System.out.print("a:");
                 int a = scanner.nextInt();
                 System.out.print("b:");

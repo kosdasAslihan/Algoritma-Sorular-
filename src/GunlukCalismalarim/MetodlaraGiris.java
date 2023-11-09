@@ -7,20 +7,20 @@ public class MetodlaraGiris {
         System.out.println("Merhaba Nasılsınız ?");
         System.out.println("Selamlar...");
     }
-    public static void faktoriyel (){
 
+    public static void faktoriyel (){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Bir sayı giriniz: ");
+        System.out.print("Bir sayı giriniz : ");
         int sayi = scanner.nextInt();
 
         int faktoriyel = 1;
-        while (sayi > 0) {
-
+        while (sayi>0) {
             faktoriyel *= sayi;
             sayi--;
 
         }
-        System.out.println("Faktöriyel = " + faktoriyel);
+        System.out.println("Faktöriyel : " + faktoriyel);
+
 
     }
 
