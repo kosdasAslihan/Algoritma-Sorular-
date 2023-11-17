@@ -7,7 +7,7 @@ public class Soru1 {
         /*
         A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine 700km D şehrine 900km mesafededir.
         Bilet tarifesi :
-        Km birim fiyatı: 0.10$
+        Km birim fiyatı: 0.10tl
         Yolcu 12 yaşından küçükse toplam fiyat %50 indirim ,
         12 ve 24 yaş arasındaysa %10 indirim ,
         65 yaşından büyükse %30 indirim ,
@@ -46,12 +46,14 @@ public class Soru1 {
                     double yeniTutar = (km*kurus) - indirimOrani;
                     System.out.println("12 yaşından küçük olduğunuz için %50 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
                 }
                 else if (yas > 12 && yas < 24) {
                     double indirimOrani = (km * kurus) * 0.10;
                     double yeniTutar = (km*kurus) - indirimOrani;
                     System.out.println("12-24 yaş aralığında olduğunuz için %10 uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
                 }
                 else if (yas > 65) {
@@ -59,6 +61,7 @@ public class Soru1 {
                     double yeniTutar = (km * kurus)- indirimOrani;
                     System.out.println("65 yaşından büyük olduğunuz için %30 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
                 }
                 else {
@@ -76,12 +79,14 @@ public class Soru1 {
                     double yeniTutar = (km*kurus) - indirimOrani;
                     System.out.println("12 yaşından küçük olduğunuz için %50 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
                 }
                 else if (yas > 12 && yas < 24) {
                     double indirimOrani = (km * kurus) * 0.10;
                     double yeniTutar = (km*kurus) - indirimOrani;
                     System.out.println("12-24 yaş aralığında olduğunuz için %10 uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
                 }
                 else if (yas > 65) {
@@ -89,6 +94,7 @@ public class Soru1 {
                     double yeniTutar = (km * kurus)- indirimOrani;
                     System.out.println("65 yaşından büyük olduğunuz için %30 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
                 }
                 else {
@@ -107,6 +113,7 @@ public class Soru1 {
                     double yeniTutar = (km * kurus) - indirimOrani;
                     System.out.println("12 yaşından küçük olduğunuz için %50 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
                 }
                 else if (yas > 12 && yas < 24) {
@@ -114,6 +121,7 @@ public class Soru1 {
                     double yeniTutar = (km * kurus) - indirimOrani;
                     System.out.println("12-24 yaş aralığında olduğunuz için %10 uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
 
                 }
@@ -122,6 +130,7 @@ public class Soru1 {
                     double yeniTutar = (km * kurus) - indirimOrani;
                     System.out.println("65 yaşından büyük olduğunuz için %30 indirim uygulanmıştır ödemeniz gereken "
                             + yeniTutar + " tl'dir");
+                    break;
 
 
                 }
@@ -129,6 +138,7 @@ public class Soru1 {
                     System.out.println("Toplam Tutar: " + km * kurus);
                     break;
                 }
+
             }
 
             else {
@@ -136,7 +146,9 @@ public class Soru1 {
             }
 
 
+
         }
+
     }
 
 
