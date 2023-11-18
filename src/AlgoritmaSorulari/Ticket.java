@@ -1,11 +1,9 @@
 package AlgoritmaSorulari;
 
 import java.util.Scanner;
-
-public class Soru1 {
-    public static void main(String[] args) {
-        /*
-        A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine 700km D şehrine 900km mesafededir.
+public class Ticket {
+     public static void main(String[] args) {
+       /* A şehrinden uçmak isteyen bir yolcu B şehrine 500km C şehrine 700km D şehrine 900km mesafededir.
         Bilet tarifesi :
         Km birim fiyatı: 0.10tl
         Yolcu 12 yaşından küçükse toplam fiyat %50 indirim ,
@@ -14,7 +12,7 @@ public class Soru1 {
         Bilet gidiş dönüş alınırsa %20 indirim uygulayan bir app create ediniz.
        */
 
-        Scanner scanner = new Scanner(System.in);
+       /* Scanner scanner = new Scanner(System.in);
         System.out.print("Lütfen Yaşınızı Giriniz: ");
         int yas = scanner.nextInt();
         scanner.nextLine();
@@ -149,7 +147,80 @@ public class Soru1 {
 
         }
 
-    }
+    } */
 
+         HavayoluCustomer customer = new HavayoluCustomer();
+         customer.setName("Ali");
+         customer.setSurname("Veli");
+         customer.setGoalCity(City.B);
+         customer.setAge(66);
+         customer.setDirection(2);
+         System.out.println(calculateCostOfTicket(customer));
+
+     }
+
+     public static double calculateCostOfTicket(HavayoluCustomer customer) {
+         int direction = customer.getDirection();
+         calculateKmCost(customer);
+         double lastTicketCost = customer.getTicketCost();
+         if (direction == 1) {
+             System.out.println("Herhangi bir indiriminiz yoktur.");
+         }
+
+         else if (direction == 2) {
+             double discountRate = 0.2;
+             lastTicketCost= lastTicketCost- lastTicketCost*discountRate;
+             customer.setTicketCost(lastTicketCost);
+         }
+         return lastTicketCost;
+     }
+
+     public static double ageDiscount(HavayoluCustomer customer, double kmCost) {
+         int age = customer.getAge();
+         double cost = customer.getTicketCost();
+
+         if (age < 12) {
+             double indirimOrani = 0.50;
+             cost = cost - cost * indirimOrani;
+             customer.setTicketCost(cost);
+
+         } else if (age > 12 && age < 24) {
+             double indirimOrani = 0.10;
+             cost = cost - cost * indirimOrani;
+             customer.setTicketCost(cost);
+
+         } else if (age > 65) {
+             double indirimOrani = 0.30;
+             cost = cost - cost * indirimOrani;
+             customer.setTicketCost(cost);
+
+         }
+         return cost;
+     }
+
+    public static double calculateKmCost(HavayoluCustomer customer) {
+        City goalCity = customer.getGoalCity();
+        double kmCost = 0.10;
+        if (goalCity.equals(City.B)) {
+            double cost= kmCost * 500;
+            customer.setTicketCost(cost);
+            ageDiscount(customer, cost);
+            return customer.getTicketCost();
+        } else if (goalCity.equals(City.C)) {
+            double cost = kmCost * 700;
+            customer.setTicketCost(cost);
+            ageDiscount(customer, kmCost);
+            return  customer.getTicketCost();
+        } else if (goalCity.equals(City.D)) {
+            double cost = kmCost * 900;
+            customer.setTicketCost(cost);
+            ageDiscount(customer, kmCost);
+            return  customer.getTicketCost();
+        } else {
+            System.out.println("aradığınız şehir bulunamadı");
+            return  customer.getTicketCost();
+        }
+
+    }
 
 }
