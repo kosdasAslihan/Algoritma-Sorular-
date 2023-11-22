@@ -39,7 +39,6 @@ public class Main {
             System.out.println(arrayList2.get(i));//arraylist2.get(i).get(i).intValue()
 
 
-
-
+        }
     }
 }
