@@ -1,8 +1,8 @@
 package GenericClasslar2;
 
 public class EsitAgirlik extends Aday{
-    public EsitAgirlik(int turkce, int matematik, int edebiyat, int fizik) {
-        super(turkce, matematik, edebiyat, fizik);
+    public EsitAgirlik(int turkce, int matematik, int edebiyat, int fizik,String isim) {
+        super(turkce, matematik, edebiyat, fizik,isim);
     }
 
     @Override

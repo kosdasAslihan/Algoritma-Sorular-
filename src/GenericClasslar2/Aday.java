@@ -5,12 +5,22 @@ public abstract class Aday {
     private int matematik;
     private int edebiyat;
     private int fizik;
+    private String isim;
 
-    public Aday(int turkce, int matematik, int edebiyat, int fizik) {
+    public Aday(int turkce, int matematik, int edebiyat, int fizik,String isim) {
         this.turkce = turkce;
         this.matematik = matematik;
         this.edebiyat = edebiyat;
         this.fizik = fizik;
+        this.isim = isim;
+    }
+
+    public String getIsim() {
+        return isim;
+    }
+
+    public void setIsim(String isim) {
+        this.isim = isim;
     }
 
     public int getTurkce() {

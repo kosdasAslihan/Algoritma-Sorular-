@@ -2,8 +2,8 @@ package GenericClasslar2;
 
 public class Sayisal  extends Aday {
 
-    public Sayisal(int turkce, int matematik, int edebiyat, int fizik) {
-        super(turkce, matematik, edebiyat, fizik);
+    public Sayisal(int turkce, int matematik, int edebiyat, int fizik,String isim) {
+        super(turkce, matematik, edebiyat, fizik,isim);
     }
 
     @Override
