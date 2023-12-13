@@ -18,11 +18,7 @@ public class Main {
         int fizikSinavi = 60;
 
 
-        FizikDersi fizikDersi = new FizikDersi(90,60);
-        Ogrenci ogrenci = new Ogrenci(fizikDersi.puanHesapla(),isim);
-        System.out.println("Öğrencinin Adı: " + ogrenci.getIsim());
-        System.out.println(ogrenci.getIsim() + "'nin Fizik Dersinin Genel Ortalamaya Etkisi: " + ogrenci.getFizikNotu() + "'dır.");
-
+       
 
     }
 
