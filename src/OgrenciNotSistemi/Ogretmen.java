@@ -1,8 +1,11 @@
 package OgrenciNotSistemi;
 
 public class Ogretmen {
-   private String ogretmenAd;
-   private String ogretmenBrans;
+    private String ogretmenAd;
+    private String ogretmenBrans;
+
+    public Ogretmen() {
+    }
 
     public String getOgretmenAd() {
         return ogretmenAd;
@@ -23,5 +26,13 @@ public class Ogretmen {
     public Ogretmen(String ogretmenAd, String ogretmenBrans) {
         this.ogretmenAd = ogretmenAd;
         this.ogretmenBrans = ogretmenBrans;
+    }
+
+    @Override
+    public String toString() {
+        return "Ogretmen{" +
+                "ogretmenAd='" + ogretmenAd + '\'' +
+                ", ogretmenBrans='" + ogretmenBrans + '\'' +
+                '}';
     }
 }

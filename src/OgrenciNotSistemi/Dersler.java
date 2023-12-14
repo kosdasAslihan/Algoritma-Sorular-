@@ -5,9 +5,9 @@ public class Dersler {
     private String unvan;
     private int notYazili;
     private int notSozlu;
-    private String ogretmen;
+    private Ogretmen ogretmen;
 
-    public Dersler(String ders, String unvan, int notYazili, int notSozlu, String ogretmen) {
+    public Dersler(String ders, String unvan, int notYazili, int notSozlu, Ogretmen ogretmen) {
         this.ders = ders;
         this.unvan = unvan;
         this.notYazili = notYazili;
@@ -47,26 +47,40 @@ public class Dersler {
         this.notSozlu = notSozlu;
     }
 
-    public String getOgretmen() {
+    public Ogretmen getOgretmen() {
         return ogretmen;
     }
 
-    public void setOgretmen(String ogretmen) {
+    public void setOgretmen(Ogretmen ogretmen) {
         this.ogretmen = ogretmen;
     }
     public double puanHesapla() {
         return getNotSozlu()*0.20 + getNotYazili()*0.80;
     }
 
-    public void ders() {
+
+    public Dersler() {
+
     }
 
-    public void ogretmenEkle() {
-        System.out.println("Öğretmen Eklendi: " + getOgretmen());
+    public void ogretmenEkle(Ogretmen ogretmen) {
+
+
 
     }
     public void ogretmenYazdir() {
-        System.out.println("Öğretmenin Adı: " + getOgretmen());
     }
+
+    @Override
+    public String toString() {
+        return "Dersler{" +
+                "ders='" + ders + '\'' +
+                ", unvan='" + unvan + '\'' +
+                ", notYazili=" + notYazili +
+                ", notSozlu=" + notSozlu +
+                ", ogretmen='" + ogretmen + '\'' +
+                '}';
+    }
+
 }
 
