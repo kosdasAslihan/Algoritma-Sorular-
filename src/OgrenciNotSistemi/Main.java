@@ -48,9 +48,9 @@ public class Main{
         System.out.println("Ders notlarını giriniz");
         Scanner scanner=new Scanner(System.in);
         String dersAdı = scanner.nextLine();
-        Dersler dersNotu =  dersAdı
+        int dersNotu = scanner.nextInt();
         switch (dersNotu){
-            case dersName1:
+            case 1:
                 System.out.println(dersName1 +" sözlü notunu giriniz");
                 dersName1.setNotSozlu(scanner.nextInt());
                 System.out.println(dersName1 +" sınav notunu giriniz");
