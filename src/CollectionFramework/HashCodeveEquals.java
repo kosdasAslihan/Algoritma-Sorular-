@@ -1,8 +1,10 @@
 package CollectionFramework;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
 
 class Player {
     private String isim;
@@ -10,6 +12,22 @@ class Player {
 
     public Player(String isim, int id) {
         this.isim = isim;
+        this.id = id;
+    }
+
+    public String getIsim() {
+        return isim;
+    }
+
+    public void setIsim(String isim) {
+        this.isim = isim;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 

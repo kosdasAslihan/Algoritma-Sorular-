@@ -31,7 +31,7 @@ public class Player implements Comparable<Player>{
     }
 
     public static void main(String[] args) {
-        /*List<String> list_string = new ArrayList<String>();
+        List<String> list_string = new ArrayList<String>();
 
 
         list_string.add("Java");
@@ -40,13 +40,14 @@ public class Player implements Comparable<Player>{
         list_string.add("Php");
         list_string.add("Go");
 
+
         Collections.sort(list_string);
 
         for (String s : list_string) {
             System.out.println(s);
-        }*/
+        }
 
-        List<Player> list_player = new ArrayList<Player>();
+        /*List<Player> list_player = new ArrayList<Player>();
 
         list_player.add(new Player("Murat",5));
         list_player.add(new Player("Emre",1));
@@ -62,7 +63,7 @@ public class Player implements Comparable<Player>{
 
         for (Player p : list_player) {
             System.out.println(p);
-        }*/
+        }
 
         Set<Player> treeset = new TreeSet<Player>();
 
@@ -73,6 +74,6 @@ public class Player implements Comparable<Player>{
 
         for (Player p : treeset) {
             System.out.println(p);
-        }
+        }*/
     }
 }
